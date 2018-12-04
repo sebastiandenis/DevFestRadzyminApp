@@ -3,11 +3,11 @@ import { RouterExtensions } from "nativescript-angular/router";
 import { DataService, IDataItem } from "../core/data.service";
 
 @Component({
-    selector: "Home",
+    selector: "Schedule",
     moduleId: module.id,
-    templateUrl: "./home.component.html"
+    templateUrl: "./schedule.component.html"
 })
-export class HomeComponent implements OnInit {
+export class ScheduleComponent implements OnInit {
     items: Array<IDataItem>;
 
     constructor(private itemService: DataService, private router: RouterExtensions) { }

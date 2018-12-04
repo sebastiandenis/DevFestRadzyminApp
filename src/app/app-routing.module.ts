@@ -2,21 +2,21 @@ import { NgModule } from "@angular/core";
 import { Routes } from "@angular/router";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 
-import { BrowseComponent } from "./browse/browse.component";
-import { HomeComponent } from "./home/home.component";
+import { InfoComponent } from "./info/info.component";
 import { ItemDetailComponent } from "./item-detail/item-detail.component";
-import { SearchComponent } from "./search/search.component";
+import { ScheduleComponent } from "./schedule/schedule.component";
+import { SpeakersComponent } from "./speakers/speakers.component";
 
-export const COMPONENTS = [BrowseComponent, HomeComponent, ItemDetailComponent, SearchComponent];
+export const COMPONENTS = [SpeakersComponent, ScheduleComponent, ItemDetailComponent, InfoComponent];
 
 const routes: Routes = [
-    { path: "", redirectTo: "/(homeTab:home//browseTab:browse//searchTab:search)", pathMatch: "full" },
+    { path: "", redirectTo: "/(scheduleTab:schedule//speakersTab:speakers//infoTab:info)", pathMatch: "full" },
 
-    { path: "home", component: HomeComponent, outlet: "homeTab" },
-    { path: "browse", component: BrowseComponent, outlet: "browseTab" },
-    { path: "search", component: SearchComponent, outlet: "searchTab" },
+    { path: "schedule", component: ScheduleComponent, outlet: "scheduleTab" },
+    { path: "speakers", component: SpeakersComponent, outlet: "speakersTab" },
+    { path: "info", component: InfoComponent, outlet: "infoTab" },
 
-    { path: "item/:id", component: ItemDetailComponent, outlet: "homeTab" }
+    { path: "item/:id", component: ItemDetailComponent, outlet: "scheduleTab" }
 ];
 
 @NgModule({
