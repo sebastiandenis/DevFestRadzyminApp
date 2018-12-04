@@ -1,0 +1,18 @@
+<TabView androidTabsPosition="bottom">
+
+    <page-router-outlet
+        *tabItem="{title: 'Grafik', iconSource: getIconSource('schedule')}"
+        name="scheduleTab">
+    </page-router-outlet>
+
+    <page-router-outlet
+        *tabItem="{title: 'Prelegenci', iconSource: getIconSource('speakers')}"
+        name="speakersTab">
+    </page-router-outlet>
+
+    <page-router-outlet
+        *tabItem="{title: 'Info', iconSource: getIconSource('info')}"
+        name="infoTab">
+    </page-router-outlet>
+
+</TabView>
